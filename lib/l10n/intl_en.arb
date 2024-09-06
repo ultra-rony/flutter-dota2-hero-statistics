@@ -1,4 +1,9 @@
 {
+  "app_name": "app_name",
   "nav_menu_home": "Home",
-  "nav_menu_settings": "Settings"
+  "nav_menu_settings": "Settings",
+  "change_theme": "Change theme to",
+  "dark_theme": "Dark",
+  "light_theme": "Light",
+  "support": "Support"
 }

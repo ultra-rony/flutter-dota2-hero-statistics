@@ -14,6 +14,9 @@ class NavigationScreen extends StatelessWidget {
         bloc: context.read(),
         builder: (context, count) {
           return Scaffold(
+            appBar: AppBar(
+              title: Text(S.of(context).app_name),
+            ),
             bottomNavigationBar: NavigationBar(
               onDestinationSelected: (int index) {
                 context.read<NavigationCubit>().onSelectedIndexMenu(index);

@@ -1,4 +1,5 @@
 import 'package:dota2_heroes/features/settings/cubit/theme_cubit.dart';
+import 'package:dota2_heroes/features/settings/widgets/card_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,20 +12,36 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: BlocBuilder<ThemeCubit, bool>(
-              bloc: context.read(),
-              builder: (context, isDark) {
-                return CupertinoSwitch(
-                  value: isDark,
-                  activeTrackColor: CupertinoColors.activeBlue,
-                  onChanged: (bool value) {
-                    context
-                        .read<ThemeCubit>()
-                        .onSelectedTheme(isDark ? false : true);
-                  },
-                );
-              })),
+      body: BlocBuilder<ThemeCubit, bool>(
+          bloc: context.read(),
+          builder: (context, isDark) {
+            return SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(15),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    CardWidget(
+                        text:
+                            "${S.of(context).change_theme} ${isDark ? S.of(context).light_theme : S.of(context).dark_theme}",
+                        widget: CupertinoSwitch(
+                          value: isDark,
+                          activeTrackColor: CupertinoColors.activeBlue,
+                          onChanged: (bool value) {
+                            context
+                                .read<ThemeCubit>()
+                                .onSelectedTheme(isDark ? false : true);
+                          },
+                        )),
+                    CardWidget(
+                        text: S.of(context).support,
+                        widget: IconButton(
+                            onPressed: () {}, icon: const Icon(Icons.message))),
+                  ],
+                ),
+              ),
+            );
+          }),
     );
   }
 }

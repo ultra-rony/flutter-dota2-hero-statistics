@@ -50,6 +50,16 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `app_name`
+  String get app_name {
+    return Intl.message(
+      'app_name',
+      name: 'app_name',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Home`
   String get nav_menu_home {
     return Intl.message(
@@ -65,6 +75,46 @@ class S {
     return Intl.message(
       'Settings',
       name: 'nav_menu_settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change theme to`
+  String get change_theme {
+    return Intl.message(
+      'Change theme to',
+      name: 'change_theme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark`
+  String get dark_theme {
+    return Intl.message(
+      'Dark',
+      name: 'dark_theme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Light`
+  String get light_theme {
+    return Intl.message(
+      'Light',
+      name: 'light_theme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Support`
+  String get support {
+    return Intl.message(
+      'Support',
+      name: 'support',
       desc: '',
       args: [],
     );
