@@ -10,34 +10,36 @@ class NavigationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<NavigationCubit, int>(builder: (context, count) {
-      return Scaffold(
-        bottomNavigationBar: NavigationBar(
-          onDestinationSelected: (int index) {
-            context.read<NavigationCubit>().onSelectedIndexMenu(index);
-          },
-          selectedIndex: context.read<NavigationCubit>().state,
-          destinations: <Widget>[
-            NavigationDestination(
-              selectedIcon: const Icon(Icons.home),
-              icon: const Icon(Icons.home_outlined),
-              label: S.of(context).nav_menu_home,
+    return BlocBuilder<NavigationCubit, int>(
+        bloc: context.read(),
+        builder: (context, count) {
+          return Scaffold(
+            bottomNavigationBar: NavigationBar(
+              onDestinationSelected: (int index) {
+                context.read<NavigationCubit>().onSelectedIndexMenu(index);
+              },
+              selectedIndex: context.read<NavigationCubit>().state,
+              destinations: <Widget>[
+                NavigationDestination(
+                  selectedIcon: const Icon(Icons.home),
+                  icon: const Icon(Icons.home_outlined),
+                  label: S.of(context).nav_menu_home,
+                ),
+                NavigationDestination(
+                  selectedIcon: const Icon(Icons.settings),
+                  icon: const Icon(Icons.settings_outlined),
+                  label: S.of(context).nav_menu_settings,
+                ),
+              ],
             ),
-            NavigationDestination(
-              selectedIcon: const Icon(Icons.settings),
-              icon: const Icon(Icons.settings_outlined),
-              label: S.of(context).nav_menu_settings,
-            ),
-          ],
-        ),
-        body: <Widget>[
-          const Scaffold(
-              body: Center(
-            child: Text("1"),
-          )),
-          const SettingsScreen(),
-        ][context.read<NavigationCubit>().state],
-      );
-    });
+            body: <Widget>[
+              const Scaffold(
+                  body: Center(
+                child: Text("1"),
+              )),
+              const SettingsScreen(),
+            ][context.read<NavigationCubit>().state],
+          );
+        });
   }
 }

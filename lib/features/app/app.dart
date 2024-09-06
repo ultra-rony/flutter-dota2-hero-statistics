@@ -1,3 +1,4 @@
+import 'package:dota2_heroes/features/settings/cubit/theme_cubit.dart';
 import 'package:dota2_heroes/features/navigation/cubit/navigation_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,17 +17,22 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
         providers: [
           BlocProvider<NavigationCubit>(create: (context) => sl()),
+          BlocProvider<ThemeCubit>(create: (context) => sl()),
         ],
-        child: MaterialApp.router(
-            localizationsDelegates: const [
-              S.delegate,
-              GlobalMaterialLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
-            ],
-            supportedLocales: S.delegate.supportedLocales,
-            routerConfig: router,
-            theme: theme(),
-            debugShowCheckedModeBanner: false));
+        child: BlocBuilder<ThemeCubit, bool>(
+            bloc: context.read(),
+            builder: (context, isDark) {
+              return MaterialApp.router(
+                  localizationsDelegates: const [
+                    S.delegate,
+                    GlobalMaterialLocalizations.delegate,
+                    GlobalWidgetsLocalizations.delegate,
+                    GlobalCupertinoLocalizations.delegate,
+                  ],
+                  supportedLocales: S.delegate.supportedLocales,
+                  routerConfig: router,
+                  theme: isDark ? darkTheme : lightTheme,
+                  debugShowCheckedModeBanner: false);
+            }));
   }
 }
