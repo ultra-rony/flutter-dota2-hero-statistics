@@ -22,6 +22,7 @@ dependencies:
   hive_flutter: ^1.1.0
   cupertino_icons: ^1.0.8
   freezed: ^2.5.7
+  logger: ^2.4.0
 
 dev_dependencies:
   flutter_test:
