@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../generated/l10n.dart';
+import '../home/presentation/screens/home_screen.dart';
 
 class NavigationScreen extends StatelessWidget {
   const NavigationScreen({super.key});
@@ -36,10 +37,7 @@ class NavigationScreen extends StatelessWidget {
               ],
             ),
             body: <Widget>[
-              const Scaffold(
-                  body: Center(
-                child: Text("1"),
-              )),
+              const HomeScreen(),
               const SettingsScreen(),
             ][context.read<NavigationCubit>().state],
           );
