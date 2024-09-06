@@ -1,4 +1,5 @@
 import 'package:dota2_heroes/features/navigation/cubit/navigation_cubit.dart';
+import 'package:dota2_heroes/features/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,7 +14,7 @@ class NavigationScreen extends StatelessWidget {
       return Scaffold(
         bottomNavigationBar: NavigationBar(
           onDestinationSelected: (int index) {
-            context.read<NavigationCubit>().onMenuSelectedIndex(index);
+            context.read<NavigationCubit>().onSelectedIndexMenu(index);
           },
           selectedIndex: context.read<NavigationCubit>().state,
           destinations: <Widget>[
@@ -34,10 +35,7 @@ class NavigationScreen extends StatelessWidget {
               body: Center(
             child: Text("1"),
           )),
-          const Scaffold(
-              body: Center(
-            child: Text("2"),
-          )),
+          const SettingsScreen(),
         ][context.read<NavigationCubit>().state],
       );
     });
