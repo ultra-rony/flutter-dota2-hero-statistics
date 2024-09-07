@@ -1,4 +1,4 @@
-import 'package:dota2_heroes/features/home/domain/repository/dota_repository.dart';
+import 'package:dota2_heroes/features/home/domain/repository/heroes_repository.dart';
 
 import '../../../../core/resources/date_state.dart';
 import '../../../../core/usecases/use_case.dart';
@@ -6,12 +6,12 @@ import '../../data/models/hero_model.dart';
 
 class GetRemoveHeroesUseCase
     implements UseCase<DataState<List<HeroModel>>, void> {
-  GetRemoveHeroesUseCase(this._dotaRepository);
+  GetRemoveHeroesUseCase(this._heroesRepository);
 
-  final DotaRepository _dotaRepository;
+  final HeroesRepository _heroesRepository;
 
   @override
   Future<DataState<List<HeroModel>>> call({void params}) {
-    return _dotaRepository.getRemoteHeroes();
+    return _heroesRepository.getRemoteHeroes();
   }
 }
