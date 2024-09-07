@@ -28,7 +28,7 @@ class HeroEntity extends Equatable {
   int? baseAttackTime;
   double? attackPoint;
   int? moveSpeed;
-  Null? turnRate;
+  Null turnRate;
   bool? cmEnabled;
   int? legs;
   int? dayVision;
