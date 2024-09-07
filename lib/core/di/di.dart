@@ -24,5 +24,5 @@ Future<void> initializeDependencies() async {
   //UseCases
   sl.registerSingleton<GetRemoveHeroesUseCase>(GetRemoveHeroesUseCase(sl()));
   // Blocs
-  sl.registerFactory<HeroesBloc>(() => HeroesBloc(sl()));
+  sl.registerFactory<HeroesBloc>(() => HeroesBloc(sl(),sl()));
 }
