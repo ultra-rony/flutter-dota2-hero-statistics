@@ -1,6 +1,5 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dota2_heroes/core/constants/constants.dart';
 import 'package:dota2_heroes/features/home/presentation/bloc/heroes_bloc.dart';
+import 'package:dota2_heroes/features/home/presentation/widgets/hero_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -45,18 +44,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               );
             }
             if (state is HeroesSuccessState) {
-              print("2131221312 ${state.heroes?[1].id!.toString()}");
-              return Text("data");
-              // return GridView.builder(
-              //     itemCount: state.heroes?.length,
-              //     gridDelegate:
-              //     const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
-              //     itemBuilder: (_, int index) {
-              //       return CachedNetworkImage(
-              //         imageUrl: "$baseImageURL${state.heroes![index].img!}",
-              //         fit: BoxFit.fitHeight,
-              //       );
-              //     });
+              return GridView.builder(
+                  itemCount: state.heroes?.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3),
+                  itemBuilder: (_, int index) {
+                    return HeroCardWidget(hero: state.heroes![index]);
+                  });
             }
             return Center(
               child: Text(state is HeroesErrorState
@@ -65,11 +59,5 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             );
           }),
     );
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
   }
 }
