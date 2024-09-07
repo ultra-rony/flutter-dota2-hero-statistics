@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ),
                 ),
               );
-            } else if (state is HeroesGetState) {
+            } else if (state is HeroesSuccessState) {
               return Center(
                 child: Text("data1"),
               );

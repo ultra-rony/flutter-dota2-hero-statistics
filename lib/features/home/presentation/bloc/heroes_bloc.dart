@@ -24,7 +24,7 @@ class HeroesBloc extends Bloc<HeroesEvent, HeroesState> {
 
     if (dataStateRemote is DataSuccess && dataStateRemote.data!.isNotEmpty) {
       logger.d(dataStateRemote.data!);
-      emit(HeroesGetState(dataStateRemote.data!));
+      emit(HeroesSuccessState(dataStateRemote.data!));
     }
 
     if (dataStateRemote is DataFailed) {
