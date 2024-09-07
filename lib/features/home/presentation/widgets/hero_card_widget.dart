@@ -15,23 +15,25 @@ class HeroCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(5),
-      child: Column(
-        children: [
-          CachedNetworkImage(
-            imageUrl: "$baseImageURL${hero.img!}",
-            fit: BoxFit.fitWidth,
-          ),
-          HeroRankWidget(
-            win: hero.i8Win!,
-            pick: hero.i8Pick!,
-            assets: 'assets/rank_logo/rank8_0.png',
-          ),
-          HeroRankWidget(
-            win: hero.i1Win!,
-            pick: hero.i1Pick!,
-            assets: 'assets/rank_logo/rank1_1.png',
-          ),
-        ],
+      child: Expanded(
+        child: Column(
+          children: [
+            CachedNetworkImage(
+              imageUrl: "$baseImageURL${hero.img!}",
+              fit: BoxFit.fitWidth,
+            ),
+            HeroRankWidget(
+              win: hero.i8Win!,
+              pick: hero.i8Pick!,
+              assets: 'assets/rank_logo/rank8_0.png',
+            ),
+            HeroRankWidget(
+              win: hero.i1Win!,
+              pick: hero.i1Pick!,
+              assets: 'assets/rank_logo/rank1_1.png',
+            ),
+          ],
+        ),
       ),
     );
   }

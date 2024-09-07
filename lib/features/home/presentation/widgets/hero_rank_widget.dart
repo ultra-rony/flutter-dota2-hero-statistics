@@ -13,7 +13,7 @@ class HeroRankWidget extends StatelessWidget {
     required this.win,
     required this.pick,
     required this.assets,
-    this.size = 20,
+    this.size = 15,
   });
 
   @override
@@ -28,7 +28,7 @@ class HeroRankWidget extends StatelessWidget {
         Text("${resp[0] ? '↑' : '↓'}${resp[1].toString().substring(0, 5)}",
             style: TextStyle(
                 color: resp[0] ? Colors.green : Colors.red,
-                fontWeight: FontWeight.bold)),
+                fontWeight: FontWeight.normal)),
       ],
     );
   }
