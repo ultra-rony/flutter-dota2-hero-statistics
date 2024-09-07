@@ -41,13 +41,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ),
                 ),
               );
-            }else if (state is HeroesGetState) {
+            } else if (state is HeroesGetState) {
               return Center(
                 child: Text("data1"),
               );
             }
             return Center(
-              child: Text("data"),
+              child: Text(state is HeroesErrorState
+                  ? state.error.toString()
+                  : S.of(context).internet_error.toString()),
             );
           }),
     );
