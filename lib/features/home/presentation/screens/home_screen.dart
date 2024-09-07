@@ -1,3 +1,4 @@
+import 'package:dota2_heroes/features/home/presentation/bloc/heroes_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,19 +24,32 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: RotationTransition(
-          turns: _animation,
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: SizedBox(
-              height: 100,
-              width: 100,
-              child: Image(image: AssetImage('assets/dota2_logo.png')),
-            ),
-          ),
-        ),
-      ),
+      body: BlocBuilder<HeroesBloc, HeroesState>(
+          bloc: context.read(),
+          builder: (context, state) {
+            if (state is HeroesLoadingState) {
+              return Center(
+                child: RotationTransition(
+                  turns: _animation,
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      height: 100,
+                      width: 100,
+                      child: Image(image: AssetImage('assets/dota2_logo.png')),
+                    ),
+                  ),
+                ),
+              );
+            }else if (state is HeroesGetState) {
+              return Center(
+                child: Text("data1"),
+              );
+            }
+            return Center(
+              child: Text("data"),
+            );
+          }),
     );
   }
 
