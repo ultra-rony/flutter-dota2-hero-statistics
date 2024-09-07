@@ -6,9 +6,15 @@ class HeroRankWidget extends StatelessWidget {
   final int win;
   final int pick;
   final String assets;
+  final double size;
 
-  const HeroRankWidget(
-      {super.key, required this.win, required this.pick, required this.assets});
+  const HeroRankWidget({
+    super.key,
+    required this.win,
+    required this.pick,
+    required this.assets,
+    this.size = 20,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +22,7 @@ class HeroRankWidget extends StatelessWidget {
     return Row(
       children: [
         SizedBox(
-          height: 20,
-          width: 20,
+          height: size,
           child: Image(image: AssetImage(assets)),
         ),
         Text("${resp[0] ? '↑' : '↓'}${resp[1].toString().substring(0, 5)}",
