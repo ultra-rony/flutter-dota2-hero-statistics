@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider<NavigationCubit>(create: (context) => sl()),
           BlocProvider<ThemeCubit>(create: (context) => sl()),
-          BlocProvider<HeroesBloc>(create: (context) => sl()),
+          BlocProvider<HeroesBloc>(create: (context) => sl()..add(HeroesFirstEvent())),
         ],
         child: BlocBuilder<ThemeCubit, bool>(
             bloc: context.read(),
