@@ -14,7 +14,7 @@ sealed class HeroesState extends Equatable {
 final class HeroesLoadingState extends HeroesState {}
 
 final class HeroesSuccessState extends HeroesState {
-  const HeroesSuccessState(List<HeroModel> heroes);
+  const HeroesSuccessState(List<HeroModel>? heroes) : super(heroes: heroes);
 }
 
 final class HeroesErrorState extends HeroesState {
