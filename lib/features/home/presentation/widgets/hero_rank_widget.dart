@@ -16,15 +16,14 @@ class HeroRankWidget extends StatelessWidget {
     return Row(
       children: [
         SizedBox(
-          height: 25,
-          width: 25,
+          height: 20,
+          width: 20,
           child: Image(image: AssetImage(assets)),
         ),
         Text("${resp[0] ? '↑' : '↓'}${resp[1].toString().substring(0, 5)}",
             style: TextStyle(
                 color: resp[0] ? Colors.green : Colors.red,
                 fontWeight: FontWeight.bold)),
-        const Expanded(child: SizedBox()),
       ],
     );
   }
