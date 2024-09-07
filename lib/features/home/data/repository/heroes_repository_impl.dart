@@ -19,13 +19,13 @@ class HeroesRepositoryImpl extends HeroesRepository {
       if (httpResponse.response.statusCode == HttpStatus.ok) {
         return DataSuccess(httpResponse.data);
       } else {
-        return DataFailed(DioError(
+        return DataFailed(DioException(
                 error: httpResponse.response.statusMessage,
                 response: httpResponse.response,
                 requestOptions: httpResponse.response.requestOptions)
             .toString());
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return DataFailed(e.toString());
     }
   }
