@@ -1,3 +1,4 @@
+import 'package:dota2_heroes/features/home/presentation/bloc/heroes_bloc.dart';
 import 'package:dota2_heroes/features/settings/cubit/theme_cubit.dart';
 import 'package:dota2_heroes/features/navigation/cubit/navigation_cubit.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider<NavigationCubit>(create: (context) => sl()),
           BlocProvider<ThemeCubit>(create: (context) => sl()),
+          BlocProvider<HeroesBloc>(create: (context) => sl()),
         ],
         child: BlocBuilder<ThemeCubit, bool>(
             bloc: context.read(),
