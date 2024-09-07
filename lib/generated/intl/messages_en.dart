@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "app_name": MessageLookupByLibrary.simpleMessage("Dota 2 heroes"),
         "change_theme": MessageLookupByLibrary.simpleMessage("Change theme to"),
         "dark_theme": MessageLookupByLibrary.simpleMessage("Dark"),
+        "internet_error":
+            MessageLookupByLibrary.simpleMessage("Internet connection error"),
         "light_theme": MessageLookupByLibrary.simpleMessage("Light"),
         "nav_menu_home": MessageLookupByLibrary.simpleMessage("Home"),
         "nav_menu_settings": MessageLookupByLibrary.simpleMessage("Settings"),

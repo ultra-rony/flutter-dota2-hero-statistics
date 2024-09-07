@@ -119,6 +119,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Internet connection error`
+  String get internet_error {
+    return Intl.message(
+      'Internet connection error',
+      name: 'internet_error',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
