@@ -7,18 +7,20 @@ import 'package:dota2_heroes/features/home/presentation/bloc/heroes_bloc.dart';
 import 'package:dota2_heroes/features/settings/cubit/theme_cubit.dart';
 import 'package:dota2_heroes/features/navigation/cubit/navigation_cubit.dart';
 import 'package:get_it/get_it.dart';
+import 'package:logger/logger.dart';
 
 final sl = GetIt.instance;
 
 Future<void> initializeDependencies() async {
   sl.registerSingleton<Dio>(Dio());
+  sl.registerSingleton<Logger>(Logger());
   // Cubit
   sl.registerFactory<NavigationCubit>(() => NavigationCubit());
   sl.registerFactory<ThemeCubit>(() => ThemeCubit());
 
   // Dependencies
   sl.registerSingleton<HeroesApiService>(HeroesApiService(sl()));
-  sl.registerSingleton<HeroesRepository>(HeroesRepositoryImpl(sl()));
+  sl.registerSingleton<HeroesRepository>(HeroesRepositoryImpl(sl(),sl()));
   //UseCases
   sl.registerSingleton<GetRemoveHeroesUseCase>(GetRemoveHeroesUseCase(sl()));
   // Blocs
