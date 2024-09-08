@@ -1,5 +1,9 @@
 import 'package:dota2_heroes/features/home/domain/entities/hero_entity.dart';
+import 'package:hive/hive.dart';
 
+part 'hero_model.g.dart';
+
+@HiveType(typeId: 0)
 class HeroModel extends HeroEntity {
   HeroModel(
       {super.id,
