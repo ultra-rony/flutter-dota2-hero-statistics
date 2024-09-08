@@ -13,11 +13,11 @@ final GoRouter router = GoRouter(
       },
       routes: <RouteBase>[
         GoRoute(
-            path: 'details/:hero_id',
+            path: 'details/:index',
             name: 'details',
             builder: (context, state) {
               return DetailsScreen(
-                heroId: state.pathParameters['hero_id'].toString(),
+                index: int.parse(state.pathParameters['index'].toString()),
               );
             }),
 

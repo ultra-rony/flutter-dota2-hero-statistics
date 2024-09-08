@@ -49,7 +49,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 3),
                   itemBuilder: (_, int index) {
-                    return HeroCardWidget(hero: state.heroes![index]);
+                    return HeroCardWidget(
+                      hero: state.heroes![index],
+                      index: index,
+                    );
                   });
             }
             return Center(

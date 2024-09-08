@@ -9,14 +9,15 @@ import '../../data/models/hero_model.dart';
 
 class HeroCardWidget extends StatelessWidget {
   final HeroModel hero;
+  final int index;
 
-  const HeroCardWidget({super.key, required this.hero});
+  const HeroCardWidget({super.key, required this.hero, required this.index});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => GoRouter.of(context)
-          .goNamed('details', pathParameters: {'hero_id': hero.id.toString()}),
+          .goNamed('details', pathParameters: {'index': index.toString()}),
       child: Ink(
         child: Padding(
           padding: const EdgeInsets.all(5),
