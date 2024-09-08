@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:dota2_heroes/features/home/data/data_sources/local/heroes_local_data_source.dart';
 import 'package:get_it/get_it.dart';
 import 'package:logger/logger.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -28,10 +29,10 @@ Future<void> initializeDependencies() async {
   // Cubit
   sl.registerFactory<NavigationCubit>(() => NavigationCubit());
   sl.registerFactory<ThemeCubit>(() => ThemeCubit());
-
   // Dependencies
   sl.registerSingleton<HeroesApiService>(HeroesApiService(sl()));
   sl.registerSingleton<HeroesRepository>(HeroesRepositoryImpl(sl(),sl()));
+  sl.registerSingleton<HeroesLocalDataSource>(HeroesLocalDataSource(box));
   //UseCases
   sl.registerSingleton<GetRemoveHeroesUseCase>(GetRemoveHeroesUseCase(sl()));
   // Blocs

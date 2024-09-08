@@ -6,4 +6,20 @@ class HeroesLocalDataSource {
   final Box<HeroModel> heroesBox;
 
   HeroesLocalDataSource(this.heroesBox);
+
+  List<HeroModel> getHeroes() {
+    return heroesBox.values.toList();
+  }
+
+  HeroModel? getHero(int index) {
+    return heroesBox.getAt(index);
+  }
+
+  void addAll(List<HeroModel> heroes) {
+    heroesBox.addAll(heroes);
+  }
+
+  void clear() {
+    heroesBox.clear();
+  }
 }
