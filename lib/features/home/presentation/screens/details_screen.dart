@@ -1,9 +1,12 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dota2_heroes/features/home/presentation/blocs/local/hero_local_bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/constants/constants.dart';
 import '../../../../generated/l10n.dart';
+import '../widgets/hero_details_content_widget.dart';
 
 class DetailsScreen extends StatelessWidget {
   final int index;
@@ -23,11 +26,17 @@ class DetailsScreen extends StatelessWidget {
                   icon: const Icon(Icons.arrow_back),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
-                title: Text(index.toString()),
-                centerTitle: true,
+                actions: [
+                  const Expanded(child: SizedBox()),
+                  CachedNetworkImage(
+                    imageUrl: "$baseImageURL${state.hero!.icon!}",
+                    fit: BoxFit.fitWidth,
+                  ),
+                  const Expanded(child: SizedBox()),
+                ],
               ),
-              body: Center(
-                child: Text(state.hero!.localizedName!),
+              body: SingleChildScrollView(
+                child: HeroDetailsContentWidget(hero: state.hero!),
               ),
             );
           }
@@ -37,7 +46,6 @@ class DetailsScreen extends StatelessWidget {
                 icon: const Icon(Icons.arrow_back),
                 onPressed: () => Navigator.of(context).pop(),
               ),
-              title: Text(index.toString()),
               centerTitle: true,
             ),
             body: Center(
