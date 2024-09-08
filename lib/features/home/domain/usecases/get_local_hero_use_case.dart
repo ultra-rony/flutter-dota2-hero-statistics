@@ -3,7 +3,7 @@ import 'package:dota2_heroes/features/home/domain/repository/heroes_repository.d
 import '../../../../core/usecases/use_case.dart';
 import '../../data/models/hero_model.dart';
 
-class GetLocalHeroUseCase implements UseCase<HeroModel, void> {
+class GetLocalHeroUseCase implements UseCase<HeroModel, int> {
   GetLocalHeroUseCase(this._heroesRepository);
 
   final HeroesRepository _heroesRepository;
