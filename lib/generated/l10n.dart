@@ -129,6 +129,166 @@ class S {
       args: [],
     );
   }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Win rate`
+  String get win_rate {
+    return Intl.message(
+      'Win rate',
+      name: 'win_rate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About the hero`
+  String get hero_about {
+    return Intl.message(
+      'About the hero',
+      name: 'hero_about',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Primary attribute`
+  String get hero_attribute {
+    return Intl.message(
+      'Primary attribute',
+      name: 'hero_attribute',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Attack type`
+  String get hero_att_type {
+    return Intl.message(
+      'Attack type',
+      name: 'hero_att_type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Attack range`
+  String get hero_att_range {
+    return Intl.message(
+      'Attack range',
+      name: 'hero_att_range',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Roles`
+  String get hero_roles {
+    return Intl.message(
+      'Roles',
+      name: 'hero_roles',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Base int`
+  String get hero_int {
+    return Intl.message(
+      'Base int',
+      name: 'hero_int',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Base agi`
+  String get hero_agi {
+    return Intl.message(
+      'Base agi',
+      name: 'hero_agi',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Base str`
+  String get hero_str {
+    return Intl.message(
+      'Base str',
+      name: 'hero_str',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Move speed`
+  String get hero_move_speed {
+    return Intl.message(
+      'Move speed',
+      name: 'hero_move_speed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Base health`
+  String get hero_health {
+    return Intl.message(
+      'Base health',
+      name: 'hero_health',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Base health regen`
+  String get hero_health_regen {
+    return Intl.message(
+      'Base health regen',
+      name: 'hero_health_regen',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Base mana`
+  String get hero_mana {
+    return Intl.message(
+      'Base mana',
+      name: 'hero_mana',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Base mana regen`
+  String get hero_mana_regen {
+    return Intl.message(
+      'Base mana regen',
+      name: 'hero_mana_regen',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Base armor`
+  String get hero_armor {
+    return Intl.message(
+      'Base armor',
+      name: 'hero_armor',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -25,11 +25,30 @@ class MessageLookup extends MessageLookupByLibrary {
         "app_name": MessageLookupByLibrary.simpleMessage("Dota 2 heroes"),
         "change_theme": MessageLookupByLibrary.simpleMessage("Change theme to"),
         "dark_theme": MessageLookupByLibrary.simpleMessage("Dark"),
+        "hero_about": MessageLookupByLibrary.simpleMessage("About the hero"),
+        "hero_agi": MessageLookupByLibrary.simpleMessage("Base agi"),
+        "hero_armor": MessageLookupByLibrary.simpleMessage("Base armor"),
+        "hero_att_range": MessageLookupByLibrary.simpleMessage("Attack range"),
+        "hero_att_type": MessageLookupByLibrary.simpleMessage("Attack type"),
+        "hero_attribute":
+            MessageLookupByLibrary.simpleMessage("Primary attribute"),
+        "hero_health": MessageLookupByLibrary.simpleMessage("Base health"),
+        "hero_health_regen":
+            MessageLookupByLibrary.simpleMessage("Base health regen"),
+        "hero_int": MessageLookupByLibrary.simpleMessage("Base int"),
+        "hero_mana": MessageLookupByLibrary.simpleMessage("Base mana"),
+        "hero_mana_regen":
+            MessageLookupByLibrary.simpleMessage("Base mana regen"),
+        "hero_move_speed": MessageLookupByLibrary.simpleMessage("Move speed"),
+        "hero_roles": MessageLookupByLibrary.simpleMessage("Roles"),
+        "hero_str": MessageLookupByLibrary.simpleMessage("Base str"),
         "internet_error":
             MessageLookupByLibrary.simpleMessage("Internet connection error"),
         "light_theme": MessageLookupByLibrary.simpleMessage("Light"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
         "nav_menu_home": MessageLookupByLibrary.simpleMessage("Home"),
         "nav_menu_settings": MessageLookupByLibrary.simpleMessage("Settings"),
-        "support": MessageLookupByLibrary.simpleMessage("Support")
+        "support": MessageLookupByLibrary.simpleMessage("Support"),
+        "win_rate": MessageLookupByLibrary.simpleMessage("Win rate")
       };
 }

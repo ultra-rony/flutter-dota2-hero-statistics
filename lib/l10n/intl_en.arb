@@ -6,5 +6,21 @@
   "dark_theme": "Dark",
   "light_theme": "Light",
   "support": "Support",
-  "internet_error": "Internet connection error"
+  "internet_error": "Internet connection error",
+  "name": "Name",
+  "win_rate": "Win rate",
+  "hero_about": "About the hero",
+  "hero_attribute": "Primary attribute",
+  "hero_att_type": "Attack type",
+  "hero_att_range": "Attack range",
+  "hero_roles": "Roles",
+  "hero_int": "Base int",
+  "hero_agi": "Base agi",
+  "hero_str": "Base str",
+  "hero_move_speed": "Move speed",
+  "hero_health": "Base health",
+  "hero_health_regen": "Base health regen",
+  "hero_mana": "Base mana",
+  "hero_mana_regen": "Base mana regen",
+  "hero_armor": "Base armor"
 }
