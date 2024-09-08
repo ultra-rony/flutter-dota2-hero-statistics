@@ -1,5 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:dota2_heroes/features/home/data/data_sources/local/heroes_local_data_source.dart';
+import 'package:dota2_heroes/features/home/domain/usecases/add_all_local_heroes_use_case.dart';
+import 'package:dota2_heroes/features/home/domain/usecases/clear_local_heroes_use_case.dart';
+import 'package:dota2_heroes/features/home/domain/usecases/get_local_hero_use_case.dart';
+import 'package:dota2_heroes/features/home/domain/usecases/get_local_heroes_use_case.dart';
 import 'package:get_it/get_it.dart';
 import 'package:logger/logger.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -35,6 +39,10 @@ Future<void> initializeDependencies() async {
   sl.registerSingleton<HeroesRepository>(HeroesRepositoryImpl(sl(),sl(),sl()));
   //UseCases
   sl.registerSingleton<GetRemoveHeroesUseCase>(GetRemoveHeroesUseCase(sl()));
+  sl.registerSingleton<AddAllLocalHeroesUseCase>(AddAllLocalHeroesUseCase(sl()));
+  sl.registerSingleton<ClearLocalHeroesUseCase>(ClearLocalHeroesUseCase(sl()));
+  sl.registerSingleton<GetLocalHeroesUseCase>(GetLocalHeroesUseCase(sl()));
+  sl.registerSingleton<GetLocalHeroUseCase>(GetLocalHeroUseCase(sl()));
   // Blocs
   sl.registerFactory<HeroesBloc>(() => HeroesBloc(sl(),sl()));
 }
