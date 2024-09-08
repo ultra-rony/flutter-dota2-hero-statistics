@@ -36,13 +36,16 @@ Future<void> initializeDependencies() async {
   // Dependencies
   sl.registerSingleton<HeroesApiService>(HeroesApiService(sl()));
   sl.registerSingleton<HeroesLocalDataSource>(HeroesLocalDataSource(box));
-  sl.registerSingleton<HeroesRepository>(HeroesRepositoryImpl(sl(),sl(),sl()));
+  sl.registerSingleton<HeroesRepository>(
+      HeroesRepositoryImpl(sl(), sl(), sl()));
   //UseCases
   sl.registerSingleton<GetRemoveHeroesUseCase>(GetRemoveHeroesUseCase(sl()));
-  sl.registerSingleton<AddAllLocalHeroesUseCase>(AddAllLocalHeroesUseCase(sl()));
+  sl.registerSingleton<AddAllLocalHeroesUseCase>(
+      AddAllLocalHeroesUseCase(sl()));
   sl.registerSingleton<ClearLocalHeroesUseCase>(ClearLocalHeroesUseCase(sl()));
   sl.registerSingleton<GetLocalHeroesUseCase>(GetLocalHeroesUseCase(sl()));
   sl.registerSingleton<GetLocalHeroUseCase>(GetLocalHeroUseCase(sl()));
   // Blocs
-  sl.registerFactory<HeroesBloc>(() => HeroesBloc(sl(),sl()));
+  sl.registerFactory<HeroesBloc>(
+      () => HeroesBloc(sl(), sl(), sl(), sl(), sl(), sl()));
 }
