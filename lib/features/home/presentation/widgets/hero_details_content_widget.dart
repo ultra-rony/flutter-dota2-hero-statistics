@@ -32,28 +32,14 @@ class HeroDetailsContentWidget extends StatelessWidget {
           ),
           _card("Name", hero.localizedName!),
           Text("Winrate"),
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(15),
-              child: HeroRankWidget(
-                size: 50,
-                win: hero.i8Win!,
-                pick: hero.i8Pick!,
-                assets: 'assets/rank_logo/rank8_0.png',
-              ),
-            ),
-          ),
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(15),
-              child: HeroRankWidget(
-                size: 50,
-                win: hero.i1Win!,
-                pick: hero.i1Pick!,
-                assets: 'assets/rank_logo/rank1_1.png',
-              ),
-            ),
-          ),
+          _winRate('assets/rank_logo/rank8_0.png', hero.i8Win!, hero.i8Pick!),
+          _winRate('assets/rank_logo/rank7_1.png', hero.i7Win!, hero.i7Pick!),
+          _winRate('assets/rank_logo/rank6_1.png', hero.i6Win!, hero.i6Pick!),
+          _winRate('assets/rank_logo/rank5_1.png', hero.i5Win!, hero.i5Pick!),
+          _winRate('assets/rank_logo/rank4_1.png', hero.i4Win!, hero.i4Pick!),
+          _winRate('assets/rank_logo/rank3_1.png', hero.i3Win!, hero.i3Pick!),
+          _winRate('assets/rank_logo/rank2_1.png', hero.i2Win!, hero.i2Pick!),
+          _winRate('assets/rank_logo/rank1_1.png', hero.i1Win!, hero.i1Pick!),
           Text("About the hero"),
           _card("Primary attribute", hero.primaryAttr!.toString()),
           _card("Attack type", hero.attackType!),
@@ -69,6 +55,20 @@ class HeroDetailsContentWidget extends StatelessWidget {
           _card("Base mana regen", hero.baseManaRegen!.toString()),
           _card("Base armor", hero.baseArmor!.toString()),
         ],
+      ),
+    );
+  }
+
+  Widget _winRate(String assets, int win, pick) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(15),
+        child: HeroRankWidget(
+          size: 50,
+          win: win,
+          pick: pick,
+          assets: assets,
+        ),
       ),
     );
   }
