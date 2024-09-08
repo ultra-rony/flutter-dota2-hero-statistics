@@ -31,8 +31,8 @@ Future<void> initializeDependencies() async {
   sl.registerFactory<ThemeCubit>(() => ThemeCubit());
   // Dependencies
   sl.registerSingleton<HeroesApiService>(HeroesApiService(sl()));
-  sl.registerSingleton<HeroesRepository>(HeroesRepositoryImpl(sl(),sl()));
   sl.registerSingleton<HeroesLocalDataSource>(HeroesLocalDataSource(box));
+  sl.registerSingleton<HeroesRepository>(HeroesRepositoryImpl(sl(),sl(),sl()));
   //UseCases
   sl.registerSingleton<GetRemoveHeroesUseCase>(GetRemoveHeroesUseCase(sl()));
   // Blocs
