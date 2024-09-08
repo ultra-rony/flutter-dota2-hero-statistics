@@ -1,9 +1,9 @@
-import 'package:dota2_heroes/features/home/presentation/bloc/heroes_bloc.dart';
 import 'package:dota2_heroes/features/home/presentation/widgets/hero_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../generated/l10n.dart';
+import '../blocs/remove/heroes_bloc.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

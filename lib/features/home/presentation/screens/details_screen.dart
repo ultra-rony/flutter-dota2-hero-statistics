@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../generated/l10n.dart';
-import '../bloc/heroes_bloc.dart';
+import '../blocs/remove/heroes_bloc.dart';
 
 class DetailsScreen extends StatelessWidget {
   final int index;

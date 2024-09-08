@@ -13,11 +13,11 @@ import 'package:dota2_heroes/features/home/data/data_sources/remove/heroes_api_s
 import 'package:dota2_heroes/features/home/data/repository/heroes_repository_impl.dart';
 import 'package:dota2_heroes/features/home/domain/repository/heroes_repository.dart';
 import 'package:dota2_heroes/features/home/domain/usecases/get_remove_heroes_use_case.dart';
-import 'package:dota2_heroes/features/home/presentation/bloc/heroes_bloc.dart';
 import 'package:dota2_heroes/features/settings/cubit/theme_cubit.dart';
 import 'package:dota2_heroes/features/navigation/cubit/navigation_cubit.dart';
 
 import '../../features/home/data/models/hero_model.dart';
+import '../../features/home/presentation/blocs/remove/heroes_bloc.dart';
 import '../constants/constants.dart';
 
 final sl = GetIt.instance;

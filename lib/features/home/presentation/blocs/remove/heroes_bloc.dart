@@ -4,12 +4,12 @@ import 'package:equatable/equatable.dart';
 import 'package:logger/logger.dart';
 import 'package:meta/meta.dart';
 
-import '../../../../core/resources/date_state.dart';
-import '../../domain/usecases/add_all_local_heroes_use_case.dart';
-import '../../domain/usecases/clear_local_heroes_use_case.dart';
-import '../../domain/usecases/get_local_hero_use_case.dart';
-import '../../domain/usecases/get_local_heroes_use_case.dart';
-import '../../domain/usecases/get_remove_heroes_use_case.dart';
+import '../../../../../core/resources/date_state.dart';
+import '../../../domain/usecases/add_all_local_heroes_use_case.dart';
+import '../../../domain/usecases/clear_local_heroes_use_case.dart';
+import '../../../domain/usecases/get_local_hero_use_case.dart';
+import '../../../domain/usecases/get_local_heroes_use_case.dart';
+import '../../../domain/usecases/get_remove_heroes_use_case.dart';
 
 part 'heroes_event.dart';
 

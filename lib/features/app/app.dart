@@ -1,4 +1,3 @@
-import 'package:dota2_heroes/features/home/presentation/bloc/heroes_bloc.dart';
 import 'package:dota2_heroes/features/settings/cubit/theme_cubit.dart';
 import 'package:dota2_heroes/features/navigation/cubit/navigation_cubit.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import '../../core/di/di.dart';
 import '../../generated/l10n.dart';
+import '../home/presentation/blocs/remove/heroes_bloc.dart';
 import 'app_themes.dart';
 import 'routes.dart';
 
