@@ -17,12 +17,6 @@ final class HeroesSuccessState extends HeroesState {
   const HeroesSuccessState(List<HeroModel>? heroes) : super(heroes: heroes);
 }
 
-final class HeroesDetailsState extends HeroesState {
-  final HeroModel? hero;
-
-  const HeroesDetailsState(this.hero);
-}
-
 final class HeroesErrorState extends HeroesState {
   const HeroesErrorState(String error);
 }

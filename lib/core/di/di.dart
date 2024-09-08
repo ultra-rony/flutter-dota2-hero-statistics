@@ -4,6 +4,7 @@ import 'package:dota2_heroes/features/home/domain/usecases/add_all_local_heroes_
 import 'package:dota2_heroes/features/home/domain/usecases/clear_local_heroes_use_case.dart';
 import 'package:dota2_heroes/features/home/domain/usecases/get_local_hero_use_case.dart';
 import 'package:dota2_heroes/features/home/domain/usecases/get_local_heroes_use_case.dart';
+import 'package:dota2_heroes/features/home/presentation/blocs/local/hero_local_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:logger/logger.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -47,5 +48,6 @@ Future<void> initializeDependencies() async {
   sl.registerSingleton<GetLocalHeroUseCase>(GetLocalHeroUseCase(sl()));
   // Blocs
   sl.registerFactory<HeroesBloc>(
-      () => HeroesBloc(sl(), sl(), sl(), sl(), sl(), sl()));
+      () => HeroesBloc(sl(), sl(), sl(), sl(), sl()));
+  sl.registerFactory<HeroLocalBloc>(() => HeroLocalBloc(sl()));
 }

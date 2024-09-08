@@ -21,7 +21,6 @@ class HeroesBloc extends Bloc<HeroesEvent, HeroesState> {
   final AddAllLocalHeroesUseCase _addAllLocalHeroesUseCase;
   final ClearLocalHeroesUseCase _clearLocalHeroesUseCase;
   final GetLocalHeroesUseCase _getLocalHeroesUseCase;
-  final GetLocalHeroUseCase _getLocalHeroUseCase;
 
   HeroesBloc(
     this._getRemoveHeroesUseCase,
@@ -29,10 +28,8 @@ class HeroesBloc extends Bloc<HeroesEvent, HeroesState> {
     this._addAllLocalHeroesUseCase,
     this._clearLocalHeroesUseCase,
     this._getLocalHeroesUseCase,
-    this._getLocalHeroUseCase,
   ) : super(HeroesLoadingState()) {
     on<HeroesFirstEvent>(onRemoveHeroes);
-    on<HeroesDetailsEvent>(onLocalHero);
   }
 
   onRemoveHeroes(HeroesFirstEvent event, Emitter<HeroesState> emit) async {
@@ -48,10 +45,5 @@ class HeroesBloc extends Bloc<HeroesEvent, HeroesState> {
     if (dataStateRemote is DataFailed) {
       emit(HeroesErrorState(dataStateRemote.error.toString()));
     }
-  }
-
-  onLocalHero(HeroesDetailsEvent event, Emitter<HeroesState> emit) async {
-    final hero = await _getLocalHeroUseCase(params: event.index);
-    emit(HeroesDetailsState(hero));
   }
 }

@@ -1,10 +1,9 @@
-import 'package:dota2_heroes/features/home/data/models/hero_model.dart';
+import 'package:dota2_heroes/features/home/presentation/blocs/local/hero_local_bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../generated/l10n.dart';
-import '../blocs/remove/heroes_bloc.dart';
 
 class DetailsScreen extends StatelessWidget {
   final int index;
@@ -13,11 +12,11 @@ class DetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    BlocProvider.of<HeroesBloc>(context).add(HeroesDetailsEvent(index));
-    return BlocBuilder<HeroesBloc, HeroesState>(
+    BlocProvider.of<HeroLocalBloc>(context).add(HeroLocalDetailsEvent(index));
+    return BlocBuilder<HeroLocalBloc, HeroLocalState>(
         bloc: context.read(),
         builder: (context, state) {
-          if (state is HeroesDetailsState) {
+          if (state is HeroLocalDetailsState) {
             return Scaffold(
               appBar: AppBar(
                 leading: IconButton(
