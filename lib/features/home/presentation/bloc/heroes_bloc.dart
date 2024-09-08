@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:bloc/bloc.dart';
 import 'package:dota2_heroes/features/home/data/models/hero_model.dart';
 import 'package:equatable/equatable.dart';
@@ -32,6 +34,7 @@ class HeroesBloc extends Bloc<HeroesEvent, HeroesState> {
     this._getLocalHeroUseCase,
   ) : super(HeroesLoadingState()) {
     on<HeroesFirstEvent>(onRemoveHeroes);
+    on<HeroesDetailsEvent>(onLocalHero);
   }
 
   onRemoveHeroes(HeroesFirstEvent event, Emitter<HeroesState> emit) async {
@@ -48,5 +51,10 @@ class HeroesBloc extends Bloc<HeroesEvent, HeroesState> {
     if (dataStateRemote is DataFailed) {
       emit(HeroesErrorState(dataStateRemote.error.toString()));
     }
+  }
+
+  onLocalHero(HeroesDetailsEvent event, Emitter<HeroesState> emit) async {
+    final hero = await _getLocalHeroUseCase(params: event.index);
+    emit(HeroesDetailsState(hero));
   }
 }

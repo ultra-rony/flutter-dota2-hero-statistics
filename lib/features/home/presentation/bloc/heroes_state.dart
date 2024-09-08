@@ -18,7 +18,7 @@ final class HeroesSuccessState extends HeroesState {
 }
 
 final class HeroesDetailsState extends HeroesState {
-  final HeroModel hero;
+  final HeroModel? hero;
 
   const HeroesDetailsState(this.hero);
 }
