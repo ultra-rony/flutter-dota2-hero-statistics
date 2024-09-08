@@ -4,3 +4,9 @@ part of 'heroes_bloc.dart';
 sealed class HeroesEvent {}
 
 class HeroesFirstEvent extends HeroesEvent {}
+
+class HeroesDetailsEvent extends HeroesEvent {
+  final int index;
+
+  HeroesDetailsEvent(this.index);
+}
