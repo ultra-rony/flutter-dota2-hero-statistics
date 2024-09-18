@@ -1,9 +1,11 @@
 import 'package:dota2_heroes/features/home/presentation/widgets/hero_rank_widget.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-List<List<dynamic>> rankData = [
-  [49, 100, [false, 49.0]],
-  [51, 100, [true, 51.0]],
+final rankData = [
+  [10641, 21679, 49.08436736011809],
+  [30347, 61963, 48.9760018075303],
+  [40755, 82835, 49.20021729945071],
+  [38757, 79043, 49.03280492896272],
 ];
 
 void main() {
@@ -16,6 +18,6 @@ void rank(win, play, answer) {
   test("Ranking unit test", () {
     final rank = WinRate(win, play);
     final result = Calculator(rank).sum();
-    expect(result, answer);
+    expect(result[1], answer);
   });
 }
