@@ -1,6 +1,4 @@
-import 'package:equatable/equatable.dart';
-
-class Shape extends Equatable {
+class Shape {
   final int win;
   final int pick;
 
@@ -9,9 +7,6 @@ class Shape extends Equatable {
   area() {
     throw UnimplementedError();
   }
-
-  @override
-  List<Object> get props => [win, pick];
 }
 
 class WinRate extends Shape {
