@@ -15,7 +15,7 @@ class HeroesLocalDataSource {
     return heroesBox.getAt(index);
   }
 
-  void addAll(List<HeroModel> heroes) {
+  void addAllHeroes(List<HeroModel> heroes) {
     heroesBox.addAll(heroes);
   }
 
