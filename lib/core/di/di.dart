@@ -27,7 +27,7 @@ Future<void> initializeDependencies() async {
   // Hive
   await Hive.initFlutter((await getApplicationDocumentsDirectory()).path);
   Hive.registerAdapter(HeroModelAdapter());
-  final box = await Hive.openBox<HeroModel>(HIVE_BOX_HEROES);
+  final box = await Hive.openBox<HeroModel>(hiveBoxHeroes);
 
   sl.registerSingleton<Dio>(Dio());
   sl.registerSingleton<Logger>(Logger());
