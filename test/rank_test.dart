@@ -1,4 +1,4 @@
-import 'package:dota2_heroes/features/home/presentation/widgets/hero_rank_widget.dart';
+import 'package:dota2_heroes/utils/rank_calulate.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 final rankData = [
