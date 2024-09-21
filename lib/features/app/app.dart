@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         ],
         child: BlocBuilder<ThemeCubit, bool>(
             bloc: context.read(),
-            builder: (context, isDark) {
+            builder: (context, isDarkTheme) {
               return MaterialApp.router(
                   localizationsDelegates: const [
                     S.delegate,
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
                   ],
                   supportedLocales: S.delegate.supportedLocales,
                   routerConfig: router,
-                  theme: isDark ? darkTheme : lightTheme,
+                  theme: isDarkTheme ? darkTheme : lightTheme,
                   debugShowCheckedModeBanner: false);
             }));
   }

@@ -14,7 +14,7 @@ class SettingsScreen extends StatelessWidget {
     return Scaffold(
       body: BlocBuilder<ThemeCubit, bool>(
           bloc: context.read(),
-          builder: (context, isDark) {
+          builder: (context, isDarkTheme) {
             return SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.all(15),
@@ -23,14 +23,14 @@ class SettingsScreen extends StatelessWidget {
                   children: [
                     CardWidget(
                         text:
-                            "${S.of(context).change_theme} ${isDark ? S.of(context).light_theme : S.of(context).dark_theme}",
+                            "${S.of(context).change_theme} ${isDarkTheme ? S.of(context).light_theme : S.of(context).dark_theme}",
                         widget: CupertinoSwitch(
-                          value: isDark,
+                          value: isDarkTheme,
                           activeTrackColor: CupertinoColors.activeBlue,
                           onChanged: (bool value) {
                             context
                                 .read<ThemeCubit>()
-                                .onSelectedTheme(isDark ? false : true);
+                                .onSelectedTheme(isDarkTheme ? false : true);
                           },
                         )),
                     CardWidget(
