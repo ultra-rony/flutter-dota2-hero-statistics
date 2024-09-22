@@ -4,7 +4,7 @@ Flutter app for viewing dota 2 hero stats
 
 ## Screenshots
 
-<div align="center">
+<div align="left">
   <div style="display: flex;">
         <img src="https://upload.image.rony.fun/images/image-23-09-24-04-04-3.png" width="25%" alt=""/>
         <img src="https://upload.image.rony.fun/images/image-23-09-24-04-04-2.png" width="25%" alt=""/>
