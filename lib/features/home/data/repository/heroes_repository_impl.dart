@@ -38,7 +38,7 @@ class HeroesRepositoryImpl extends HeroesRepository {
 
   @override
   Future<void> addAllLocalHeroesBox(List<HeroModel> heroes) async {
-    _heroesLocalDataSource.addAll(heroes);
+    _heroesLocalDataSource.addAllHeroes(heroes);
   }
 
   @override

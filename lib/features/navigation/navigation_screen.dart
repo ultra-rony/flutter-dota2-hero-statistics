@@ -20,7 +20,7 @@ class NavigationScreen extends StatelessWidget {
             ),
             bottomNavigationBar: NavigationBar(
               onDestinationSelected: (int index) {
-                context.read<NavigationCubit>().onSelectedIndexMenu(index);
+                context.read<NavigationCubit>().onNavBarSelectedMenu(index);
               },
               selectedIndex: context.read<NavigationCubit>().state,
               destinations: <Widget>[
