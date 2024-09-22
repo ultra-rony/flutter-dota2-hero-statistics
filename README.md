@@ -4,10 +4,10 @@ Flutter app for viewing dota 2 hero stats
 
 ## Screenshots
 
-<img src="https://upload.image.rony.fun/images/image-23-09-24-03-38-3.png" width="25%"/>
-<img src="https://upload.image.rony.fun/images/image-23-09-24-03-38-2.png" width="25%"/>
-<img src="https://upload.image.rony.fun/images/image-23-09-24-03-38-1.png" width="25%"/><br>
-<img src="https://upload.image.rony.fun/images/image-23-09-24-03-38.png" width="25%"/><br>
+<img src="https://upload.image.rony.fun/images/image-23-09-24-04-04-3.png" width="25%"/>
+<img src="https://upload.image.rony.fun/images/image-23-09-24-04-04-2.png" width="25%"/>
+<img src="https://upload.image.rony.fun/images/image-23-09-24-04-04-1.png" width="25%"/><br>
+<img src="https://upload.image.rony.fun/images/image-23-09-24-04-04.png" width="25%"/><br>
 
 ## OpenDota API (25.0.0)
 
