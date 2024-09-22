@@ -1,16 +1,28 @@
-# dota2_heroes
+# Flutter app
 
 Flutter app for viewing dota 2 hero stats
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+<img src="https://upload.image.rony.fun/images/image-23-09-24-03-38-3.png" width="25%"/>
+<img src="https://upload.image.rony.fun/images/image-23-09-24-03-38-2.png" width="25%"/>
+<img src="https://upload.image.rony.fun/images/image-23-09-24-03-38-1.png" width="25%"/><br>
+<img src="https://upload.image.rony.fun/images/image-23-09-24-03-38.png" width="25%"/><br>
 
-A few resources to get you started if this is your first Flutter project:
+## OpenDota API (25.0.0)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+[OpenDota API docs](https://docs.opendota.com/)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Dependencies
+
+- flutter_localizations
+- flutter_bloc
+- equatable
+- get_it
+- go_router
+- cached_network_image
+- intl
+- path_provider
+- hive_flutter
+- logger
+- retrofit
