@@ -2,6 +2,10 @@
 
 Flutter app for viewing dota 2 hero stats
 
+## OpenDota API (25.0.0)
+
+[OpenDota API docs](https://docs.opendota.com/)
+
 ## Screenshots
 
 <div align="left">
@@ -12,10 +16,6 @@ Flutter app for viewing dota 2 hero stats
         <img src="https://upload.image.rony.fun/images/image-23-09-24-04-04.png" width="25%" alt=""/>
     </div>
 </div>
-
-## OpenDota API (25.0.0)
-
-[OpenDota API docs](https://docs.opendota.com/)
 
 ## Dependencies
 
