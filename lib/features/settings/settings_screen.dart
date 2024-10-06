@@ -26,7 +26,6 @@ class SettingsScreen extends StatelessWidget {
                             "${S.of(context).change_theme} ${isDarkTheme ? S.of(context).light_theme : S.of(context).dark_theme}",
                         widget: CupertinoSwitch(
                           value: isDarkTheme,
-                          activeTrackColor: CupertinoColors.activeBlue,
                           onChanged: (bool value) {
                             context
                                 .read<ThemeCubit>()

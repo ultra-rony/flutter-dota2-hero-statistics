@@ -13,12 +13,12 @@ import 'package:path_provider/path_provider.dart';
 import 'package:dota2_heroes/features/home/data/data_sources/remove/heroes_api_service.dart';
 import 'package:dota2_heroes/features/home/data/repository/heroes_repository_impl.dart';
 import 'package:dota2_heroes/features/home/domain/repository/heroes_repository.dart';
-import 'package:dota2_heroes/features/home/domain/usecases/get_remove_heroes_use_case.dart';
+import 'package:dota2_heroes/features/home/domain/usecases/get_remote_heroes_use_case.dart';
 import 'package:dota2_heroes/features/settings/cubit/theme_cubit.dart';
 import 'package:dota2_heroes/features/navigation/cubit/navigation_cubit.dart';
 
 import '../../features/home/data/models/hero_model.dart';
-import '../../features/home/presentation/blocs/remove/heroes_bloc.dart';
+import '../../features/home/presentation/blocs/remote/heroes_bloc.dart';
 import '../constants/constants.dart';
 
 final sl = GetIt.instance;
@@ -40,7 +40,7 @@ Future<void> initializeDependencies() async {
   sl.registerSingleton<HeroesRepository>(
       HeroesRepositoryImpl(sl(), sl(), sl()));
   //UseCases
-  sl.registerSingleton<GetRemoveHeroesUseCase>(GetRemoveHeroesUseCase(sl()));
+  sl.registerSingleton<GetRemoteHeroesUseCase>(GetRemoteHeroesUseCase(sl()));
   sl.registerSingleton<AddAllLocalHeroesUseCase>(
       AddAllLocalHeroesUseCase(sl()));
   sl.registerSingleton<ClearLocalHeroesUseCase>(ClearLocalHeroesUseCase(sl()));

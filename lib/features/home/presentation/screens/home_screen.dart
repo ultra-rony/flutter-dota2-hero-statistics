@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../generated/l10n.dart';
-import '../blocs/remove/heroes_bloc.dart';
+import '../blocs/remote/heroes_bloc.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

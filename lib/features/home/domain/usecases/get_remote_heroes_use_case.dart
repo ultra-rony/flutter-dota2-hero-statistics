@@ -4,9 +4,9 @@ import '../../../../core/resources/date_state.dart';
 import '../../../../core/usecases/use_case.dart';
 import '../../data/models/hero_model.dart';
 
-class GetRemoveHeroesUseCase
+class GetRemoteHeroesUseCase
     implements UseCase<DataState<List<HeroModel>>, void> {
-  GetRemoveHeroesUseCase(this._heroesRepository);
+  GetRemoteHeroesUseCase(this._heroesRepository);
 
   final HeroesRepository _heroesRepository;
 

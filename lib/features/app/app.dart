@@ -7,7 +7,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import '../../core/di/di.dart';
 import '../../generated/l10n.dart';
-import '../home/presentation/blocs/remove/heroes_bloc.dart';
+import '../home/presentation/blocs/remote/heroes_bloc.dart';
 import 'app_themes.dart';
 import 'routes.dart';
 
