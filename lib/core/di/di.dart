@@ -10,7 +10,7 @@ import 'package:logger/logger.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
 
-import 'package:dota2_heroes/features/home/data/data_sources/remove/heroes_api_service.dart';
+import 'package:dota2_heroes/features/home/data/data_sources/remote/heroes_api_service.dart';
 import 'package:dota2_heroes/features/home/data/repository/heroes_repository_impl.dart';
 import 'package:dota2_heroes/features/home/domain/repository/heroes_repository.dart';
 import 'package:dota2_heroes/features/home/domain/usecases/get_remote_heroes_use_case.dart';

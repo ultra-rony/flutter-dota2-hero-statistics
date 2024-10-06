@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 
 import 'package:dota2_heroes/core/resources/date_state.dart';
 import 'package:dota2_heroes/features/home/data/data_sources/local/heroes_local_data_source.dart';
-import 'package:dota2_heroes/features/home/data/data_sources/remove/heroes_api_service.dart';
+import 'package:dota2_heroes/features/home/data/data_sources/remote/heroes_api_service.dart';
 import 'package:dota2_heroes/features/home/data/models/hero_model.dart';
 import 'package:dota2_heroes/features/home/domain/repository/heroes_repository.dart';
 import 'package:logger/logger.dart';
